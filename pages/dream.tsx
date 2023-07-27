@@ -132,7 +132,7 @@ const Home: NextPage = () => {
         photo={session?.user?.image || undefined}
         email={session?.user?.email || undefined}
       />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
+      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mb-0 mb-8">
         {status === "authenticated" ? (
           <Link
             href="/buy-credits"
@@ -158,12 +158,12 @@ const Home: NextPage = () => {
         </h1>
         {status === "authenticated" && data && !restoredImage && (
           <p className="text-black">
-            Je hebt nog{" "}
+            Je hebt {" "}
             <span className="font-semibold text-black">
               {data.remainingGenerations}{" "}
               {data?.remainingGenerations > 1 ? "credits" : "credit"}
             </span>{" "}
-            over.{" "}
+            .{" "}
             {data.remainingGenerations < 2 && (
               <span>
                 Koop meer credits{" "}

@@ -8,6 +8,7 @@ import Faq from "../components/Faq";
 import Who from "../components/Who";
 import Pricing from "../components/Pricing";
 import { Testimonials } from "../components/Testimonials";
+import ContactForm from "../components/ContactForm";
 
 const Home: NextPage = () => {
   return (<div className='bg-white'>
@@ -33,7 +34,7 @@ const Home: NextPage = () => {
           className="bg-teal-600 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-teal-400 transition"
           href="/dream"
         >
-          Probeer nu 30+ design stijlen op jouw huis
+          Probeer nu gratis 1 Interieur design met behulp van ai 
         </Link>
         <div className="flex justify-between  items-center w-full flex-col sm:mt-10 mt-6">
         <div className="max-w-screen-xl mx-auto md:px-8">
@@ -72,6 +73,7 @@ const Home: NextPage = () => {
       <Testimonials/>
       <Pricing/>
       <Faq/>
+      <ContactForm/>
       <Footer />
     </div></div>
   );

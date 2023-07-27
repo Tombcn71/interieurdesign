@@ -87,13 +87,13 @@ export default () => {
             a: "Omdat er veel meer engels dan nederlands word gesproken in de wereld is er ook meer content over interieur aanwezig op het internet in het engels, daarom geven wij de a.i. opdracht te zoeken in het engels om op deze manier de beste resultaten te kunnen leveren."
         },
         {
-            q: "Hoe veranderd a.i. het vak van interieurdesigner? Nu ik dit ook zelf kan",
-            a: "Wij denken dat het tijdwinst voor de interieurdesigner opleverd en dat de aandacht meer gaat verschuiven van daadwerkelijk ontwerpen naar aanschaf van het interieur."
+            q: "Zit ik ergens aan vast wanneer ik credits koop? ",
+            a: "Nee je zit nergens aan vast je betaald  1 keer voor je credits en als deze op zijn beslis ji alleen wanneer je weer nieuwe wilt kopen."
         },
     ]
   
     return (
-        <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 mb-20 md:px-8">
+        <section id='Faq' className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 mb-20 md:px-8">
             <div className="space-y-3 text-center">
                 <h1 className="text-4xl text-gray-800 ">
 Veel gestelde vragen                </h1>

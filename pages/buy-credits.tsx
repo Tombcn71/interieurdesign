@@ -31,12 +31,11 @@ export default function Pricing() {
           </div>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-500 mb-10">
-          Momenteel heb je{" "}
+          Momenteel heb je {" "}
           <span className="font-semibold text-gray-400">
             {data?.remainingGenerations}{" "}
-            {data?.remainingGenerations > 1 ? "credits" : "credit"}
+            {data?.remainingGenerations > 1 ? "credits" : "credit"}.  Koop hieronder jouw bundel veilg met ideal.
           </span>
-           Koop hieronder meer.
         </p>
       </main>
       <div className="w-full">

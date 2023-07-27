@@ -1,3 +1,8 @@
+import Link from "next/link";
+
+
+
+
 export default () => {
 
     const plans = [
@@ -29,7 +34,7 @@ export default () => {
     ];
 
     return (
-        <section className='py-14 mb-20'>
+        <section id='Prijsbundels'className='py-14 mb-20'>
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
                 <div className='relative max-w-xl mx-auto sm:text-center'>
                     <h3 className='text-gray-800 text-3xl  sm:text-4xl'>
@@ -71,9 +76,9 @@ Geen abonnement je zit nergens aan vast je betaald alleen voor wat je gebruikt m
                                     }
                                 </ul>
                                 <div className="flex-1 flex items-end">
-                                    <button className='px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150 text-white bg-teal-600 hover:bg-teal-500 active:bg-teal-700'>
+                                 <Link href='/dream'>   <button   className='px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150 text-white bg-teal-600 hover:bg-teal-500 active:bg-teal-700'>
                                         Aanmelden
-                                    </button>
+                                    </button></Link>
                                 </div>
                             </div>
                         ))
