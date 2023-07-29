@@ -45,12 +45,11 @@ export default function ContactForm() {
                     href="/"
                     className="border-r border-gray-300 text-black pr-4 flex space-x-2 hover:text-teal-600 transition"
                 >
-                    <div>Terug naar de homepagina</div>
 
                 </Link>
 
                     <div>
-                        <h3 id='Contact' className="text-gray-800 mt-16 text-3xl font-semibold sm:text-4xl">
+                        <h3 id='Contact' className="text-gray-800 text-3xl font-semibold sm:text-4xl">
                             Contact                        </h3>
                         <p className="mt-3">
                             Heb je een vraag of suggestie? Vul het het formulier hier beneden in. We horen graag van je!                        </p>

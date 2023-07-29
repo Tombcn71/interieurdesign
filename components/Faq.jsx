@@ -14,7 +14,7 @@ const FaqsCard = (props) => {
     }
 
     return (
-        <div 
+        <div
             className="space-y-3 mt-5 overflow-hidden border-b"
             key={idx}
             onClick={handleOpenAnswer}
@@ -35,7 +35,7 @@ const FaqsCard = (props) => {
             </h4>
             <div
                 ref={answerElRef} className="duration-300"
-                style={state ? {height: answerH } : {height: '0px'}}
+                style={state ? { height: answerH } : { height: '0px' }}
             >
                 <div>
                     <p className="text-gray-500">
@@ -91,14 +91,14 @@ export default () => {
             a: "Nee je zit nergens aan vast je betaald  1 keer voor je credits en als deze op zijn beslis ji alleen wanneer je weer nieuwe wilt kopen."
         },
     ]
-  
+
     return (
-        <section id='Faq' className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 mb-20 md:px-8">
+        <section id='Faq' className="leading-relaxed  max-w-screen-xl mt-12 mx-auto px-4 mb-20 md:px-8">
             <div className="space-y-3 text-center">
                 <h1 className="text-4xl text-gray-800 ">
-Veel gestelde vragen                </h1>
+                    Veel gestelde vragen                </h1>
                 <p className="text-gray-600 max-w-lg mx-auto text-lg">
-We hebben geprobeerd zoveel mogelijke vragen te beantwoorden, staat jouw vraag er niet bij? Neem dan contact met ons op. We horen het graag!                </p>
+                    We hebben geprobeerd zoveel mogelijke vragen te beantwoorden, staat jouw vraag er niet bij? Neem dan contact met ons op. We horen het graag!                </p>
             </div>
             <div className="mt-14 max-w-2xl mx-auto">
                 {

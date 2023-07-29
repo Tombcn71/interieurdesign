@@ -1,14 +1,16 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import { CrispProvider } from '../components/CrispProvider'
 
 class MyDocument extends Document {
   render() {
-    let description = "Generate your dream room in seconds.";
+    let description = "Interieur design met behulp van AI voor jouw huis.";
     let ogimage = "https://www.roomgpt.io/og-image.png";
-    let sitename = "roomGPT.io";
-    let title = "Dream Room Generator";
+    let sitename = "Interieurdesign.ai";
+    let title = "AI interieur designer";
 
     return (
-      <Html lang="en">
+      <Html  className="scroll-smooth" lang="en">
+       <CrispProvider />
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content={description} />
@@ -20,7 +22,8 @@ class MyDocument extends Document {
           <meta name="twitter:description" content={description} />
           <meta property="og:image" content={ogimage} />
           <meta name="twitter:image" content={ogimage} />
-        </Head>
+        </Head>       
+
         <body className="bg-[#17181C] text-white">
           <Main />
           <NextScript />
