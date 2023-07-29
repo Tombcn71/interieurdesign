@@ -1,5 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
-import { CrispProvider } from '../components/CrispProvider'
+import { CrispProvider } from '../components/crisp-provider'
 
 class MyDocument extends Document {
   render() {
