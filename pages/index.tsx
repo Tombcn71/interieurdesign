@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <Header />
         <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20 background-gradient">
           <h1 className="mx-auto max-w-4xl font-display text-5xl  tracking-normal text-black sm:text-7xl">
-            Interieur design{" "}
+            Coming soon! Interieur design{" "}
             <span className="relative whitespace-nowrap text-blue-600">
               <span className="relative text-teal-600">met behulp van AI</span>
             </span>{" "}
