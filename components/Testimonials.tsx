@@ -4,7 +4,6 @@ const testimonials = [
   [
     {
       content: "So good! I need this right now. Congrats on the launch!",
-      link: "https://twitter.com/eveporcello/status/1631438728999899136",
       author: {
         name: "Eve Porcello",
         role: "Engineer & Author",
@@ -15,7 +14,6 @@ const testimonials = [
     {
       content:
         "Finally! Something to help me get over my indecisiveness when decorating my house!",
-      link: "https://twitter.com/arthur_dvorkin/status/1631402865209274369",
       author: {
         name: "Arthur Dvorkin",
         role: "Engineer",
@@ -27,7 +25,6 @@ const testimonials = [
     {
       content:
         "This is incredible, you don't need an interior designer anymore.",
-      link: "https://www.tiktok.com/@thenubians/video/7206088336044313861?q=roomgpt.io&t=1677909079689",
       author: {
         name: "Ade Dada",
         role: "Startup Founder",
@@ -37,7 +34,6 @@ const testimonials = [
     {
       content:
         "I haven't changed my room layout for 5 years, but this app may change that. Great job.",
-      link: "https://twitter.com/RobAttfield/status/1631545265281974273",
       author: {
         name: "Rob Attfield",
         role: "Software Engineer",
@@ -49,7 +45,6 @@ const testimonials = [
     {
       content:
         "This is fantastic. I've already decided on a new wall color from a generated image and repainting it is now my weekend project.",
-      link: "https://twitter.com/Music4UsAll/status/1631622608595607552",
       author: {
         name: "Music",
         role: "Some dude on the internet",
@@ -58,7 +53,6 @@ const testimonials = [
     },
     {
       content: "🤯",
-      link: "https://twitter.com/github/status/1631821360619028482",
       author: {
         name: "GitHub",
         role: "The one and only",
@@ -73,33 +67,31 @@ export function Testimonials() {
     <section
       id="testimonials"
       aria-label="What our customers are saying"
-      className="py-10 mb-20"
-    ><div className="bg-white">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 md:px-7">
-        <div className="mx-auto md:text-center">
-        <h1 className="mx-auto max-w-3xl font-display text-3xl  tracking-normal text-black sm:text-5xl">
-         Wat mensen{" "}
-          <span className="relative whitespace-nowrap text-blue-600">
-            <span className="relative text-teal-600">zeggen</span>
-          </span>{" "}
-          over deze app.
-        </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg sm:text-black text-black leading-7">
-Diverse mensen hebben deze app uitgeprobeerd.          </p>
-        </div>
-        <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-16 lg:max-w-none lg:grid-cols-3"
-        >
-          {testimonials.map((column, columnIndex) => (
-            <li key={columnIndex}>
-              <ul role="list" className="flex flex-col gap-y-6 sm:gap-y-8">
-                {column.map((testimonial, testimonialIndex) => (
-                  <li
-                    key={testimonialIndex}
-                    className="hover:scale-105 transition duration-300 ease-in-out "
-                  >
-                    <a href={testimonial.link} target="_blank" rel="noreferrer">
+      className="py-10 mb-20">
+      <div className="bg-white">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 md:px-7">
+          <div className="mx-auto md:text-center">
+            <h1 className="mx-auto max-w-3xl font-display text-3xl  tracking-normal text-black sm:text-5xl">
+              Wat mensen{" "}
+              <span className="relative whitespace-nowrap text-blue-600">
+                <span className="relative text-teal-600">zeggen</span>
+              </span>{" "}
+              over deze app.
+            </h1>
+            <p className="mx-auto mt-6 max-w-xl text-lg sm:text-black text-black leading-7">
+              Diverse mensen hebben deze app uitgeprobeerd.{" "}
+            </p>
+          </div>
+          <ul
+            role="list"
+            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-16 lg:max-w-none lg:grid-cols-3">
+            {testimonials.map((column, columnIndex) => (
+              <li key={columnIndex}>
+                <ul role="list" className="flex flex-col gap-y-6 sm:gap-y-8">
+                  {column.map((testimonial, testimonialIndex) => (
+                    <li
+                      key={testimonialIndex}
+                      className="hover:scale-105 transition duration-300 ease-in-out ">
                       <figure className="relative rounded-2xl  p-6 shadow-xl shadow-slate-900/10">
                         <blockquote className="relative">
                           <p className="text-lg tracking-tight text-black">
@@ -126,14 +118,14 @@ Diverse mensen hebben deze app uitgeprobeerd.          </p>
                           </div>
                         </figcaption>
                       </figure>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </div></div>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </section>
   );
 }

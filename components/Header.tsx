@@ -67,18 +67,21 @@ export default function Header({
         </div>
       ) : (
         <div className="flex justify-end items-center space-x-4">
-          <Link scroll={false}
-            href="#Faq"
+          <Link
+            scroll={false}
+            href="/#Faq"
             className=" border-r border-gray-300 text-black pr-4 flex space-x-2 hover:text-teal-600 transition">
             <div>Faq</div>
           </Link>
-          <Link scroll={false}
-            href="#Prijsbundels"
+          <Link
+            scroll={false}
+            href="/#Prijsbundels"
             className="border-r border-gray-300 text-black pr-4 flex space-x-2 hover:text-teal-600 transition">
             <div>Prijs bundels</div>
           </Link>
-          <Link scroll={false}
-            href="/Contact"
+          <Link
+            scroll={false}
+            href="/#Contact"
             className="border-r border-gray-300 text-black pr-4 flex space-x-2 hover:text-teal-600 transition">
             <div>Contact</div>
           </Link>

@@ -63,6 +63,10 @@ export default () => {
             a: "Je krijgt 1 design gratis, daarna kun je al instappen vanaf 9€ waarvoor je 30 designs krijgt er zijn ook bundels van 19€ waarvoor je 100 credits krijgt en 29€ waarvoor je 200 credits krijgt wanneer je dus iets meer betaald krijg je meer voordeel ."
         },
         {
+            q: "Zit ik ergens aan vast wanneer ik credits koop? ",
+            a: "Nee je zit nergens aan vast je betaald  1 keer voor je credits en als deze op zijn beslis ji alleen wanneer je weer nieuwe wilt kopen."
+        },
+        {
             q: "Waar komen de foto's vandaan?",
             a: "De foto' zijn afkomstig van het internet wij hebben de a.i. zo ingesteld dat hij de mooiste foto's van hoofdzakelijk pinterest gebruikt, zodoende ben je verzekerd van de laatste trends en de mooiste foto's."
         },
@@ -86,10 +90,7 @@ export default () => {
             q: "Waarom zijn de keuzes voor welke kamer ik wil invoeren en de interieurstijlen in het engels?",
             a: "Omdat er veel meer engels dan nederlands word gesproken in de wereld is er ook meer content over interieur aanwezig op het internet in het engels, daarom geven wij de a.i. opdracht te zoeken in het engels om op deze manier de beste resultaten te kunnen leveren."
         },
-        {
-            q: "Zit ik ergens aan vast wanneer ik credits koop? ",
-            a: "Nee je zit nergens aan vast je betaald  1 keer voor je credits en als deze op zijn beslis ji alleen wanneer je weer nieuwe wilt kopen."
-        },
+
     ]
 
     return (

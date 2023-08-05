@@ -23,7 +23,9 @@ const Home: NextPage = () => {
           <h1 className="mx-auto max-w-4xl font-display text-5xl  tracking-normal text-black sm:text-7xl">
             Coming soon! Interieur design{" "}
             <span className="relative whitespace-nowrap text-blue-600">
-              <span className="relative text-teal-600">met behulp van AI</span>
+              <span className="relative text-teal-600">
+                met behulp van A.i.
+              </span>
             </span>{" "}
             voor jouw huis.
           </h1>
