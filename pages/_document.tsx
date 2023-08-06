@@ -1,5 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
-import { CrispProvider } from '../components/crisp-provider'
 
 class MyDocument extends Document {
   render() {
@@ -9,8 +8,7 @@ class MyDocument extends Document {
     let title = "AI interieur designer";
 
     return (
-      <Html  className="scroll-smooth" lang="en">
-       <CrispProvider />
+      <Html className="scroll-smooth" lang="en">
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content={description} />
@@ -22,7 +20,7 @@ class MyDocument extends Document {
           <meta name="twitter:description" content={description} />
           <meta property="og:image" content={ogimage} />
           <meta name="twitter:image" content={ogimage} />
-        </Head>       
+        </Head>
 
         <body className="bg-[#17181C] text-white">
           <Main />

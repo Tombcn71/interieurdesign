@@ -72,7 +72,7 @@ export default function Contact() {
                             in. We horen graag van je!{" "}
                         </p>
                     </div>
-                    <form onSubmit={handleSubmit(onSubmit)} className="my-10">
+                    <form onSubmit={handleSubmit(onSubmit)} className="my-10" >
                         <input
                             type="checkbox"
                             id=""
