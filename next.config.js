@@ -2,7 +2,14 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["upcdn.io", "replicate.delivery", "lh3.googleusercontent.com", "scontent-atl3-2.xx.fbcdn.net",'platform-lookaside.fbsbx.com'],
+    domains: [
+      "upcdn.io",
+      "replicate.delivery",
+      "pbxt.replicate.delivery",
+      "lh3.googleusercontent.com",
+      "scontent-atl3-2.xx.fbcdn.net",
+      "platform-lookaside.fbsbx.com",
+    ],
   },
   async redirects() {
     return [
