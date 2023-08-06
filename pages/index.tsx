@@ -12,7 +12,7 @@ import ContactForm from "../components/ContactForm";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-white">
+    <div>
       <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
         <Head>
           <title>interieurdesign.ai</title>
