@@ -46,30 +46,31 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
     console.log("✅ Success:", event.id);
 
     // Cast event data to Stripe object.
-    if (
-      event.type === "payment_intent.succeeded" ||
-      event.type === "checkout.session.completed"
-    ) {
+    if (event.type === "payment_intent.succeeded") {
       const paymentIntent = event.data.object as Stripe.PaymentIntent;
       console.log(`💰 PaymentIntent: ${JSON.stringify(paymentIntent)}`);
 
       // @ts-ignore
-      const userEmail = paymentIntent.customer_details.email;
+      const userEmail = paymentIntent.charges.data[0].billing_details.email;
       let creditAmount = 0;
 
-      // @ts-ignore
+      // This is where the magic happens
       switch (paymentIntent.amount) {
         case 100:
-          creditAmount = 10;
+        case 1000:
+          creditAmount = 20;
           break;
-        case 900:
-          creditAmount = 30;
+        case 1500:
+        case 3000:
+          creditAmount = 80;
           break;
-        case 1900:
-          creditAmount = 100;
+        case 2500:
+          creditAmount = 160;
           break;
-        case 2900:
-          creditAmount = 200;
+        case 5000:
+        case 10000:
+          creditAmount = 400;
+          break;
       }
       await prisma.user.update({
         where: {
