@@ -39,7 +39,7 @@
     "swiper": "^9.4.1",
     "swr": "^2.1.0",
     "uploader": "^3.9.0",
-    "vercel": "^31.2.3"
+    "vercel": "^24.2.4"
   },
   "devDependencies": {
     "@types/micro-cors": "^0.1.3",
