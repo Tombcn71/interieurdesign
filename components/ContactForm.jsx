@@ -1,4 +1,7 @@
 // This example uses `@web3forms/react` plugin and tailwindcss for css styling
+"use client"
+
+
 import Link from "next/link";
 
 import Image from "next/image";

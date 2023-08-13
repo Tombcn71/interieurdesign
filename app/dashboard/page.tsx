@@ -7,7 +7,7 @@ import prisma from "../lib/prismadb";
 import { Room } from "@prisma/client";
 import { RoomGeneration } from "../components/RoomGenerator";
 import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]";
+import { authOptions } from "../app/api/auth/[...nextauth]";
 
 export default function Dashboard({ rooms }: { rooms: Room[] }) {
   const { data: session } = useSession();

@@ -1,7 +1,7 @@
 import { useSession } from "next-auth/react";
 import Script from "next/script";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import Head from "next/head";
 import useSWR from "swr";
 
