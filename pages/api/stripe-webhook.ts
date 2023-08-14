@@ -8,17 +8,16 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2022-11-15",
 });
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
-
 const webhookSecret: string = process.env.STRIPE_WEBHOOK_SECRET || "";
 
 const cors = Cors({
   allowMethods: ["POST", "HEAD"],
 });
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
 
 const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
