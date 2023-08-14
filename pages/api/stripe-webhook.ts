@@ -55,6 +55,7 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
       // @ts-ignore
       const userEmail = paymentIntent.customer_details.email;
+
       let creditAmount = 0;
 
       // @ts-ignore
