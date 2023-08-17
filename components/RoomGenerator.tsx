@@ -8,14 +8,14 @@ export function RoomGeneration({
   generated: string;
 }) {
   return (
-    <div className="flex flex-col space-y-10 mt-4 mb-4 border px-8 pb-8 pt-2 border-gray-600 rounded-xl">
+    <div className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mb-0 mb-8">
       <div className="flex sm:space-x-8 sm:flex-row flex-col pb-5">
         <div>
           <h3 className="mb-1 font-medium text-lg">Original</h3>
           <Image
             alt="Original room"
             src={original}
-            className="rounded-2xl h-full"
+            className="rounded-2xl h-full sm:mt-0 mt-2"
             width={400}
             height={400}
           />

@@ -83,7 +83,7 @@ const Home: NextPage = () => {
           generatePhoto(file[0].fileUrl.replace("raw", "thumbnail"));
         }
       }}
-      width="670px"
+      width="700px"
       height="250px"
     />
   );
@@ -334,8 +334,8 @@ const Home: NextPage = () => {
                     alt="original photo"
                     src={originalPhoto}
                     className="rounded-2xl h-96"
-                    width={475}
-                    height={475}
+                    width={400}
+                    height={400}
                   />
                 )}
                 {restoredImage && originalPhoto && !sideBySide && (

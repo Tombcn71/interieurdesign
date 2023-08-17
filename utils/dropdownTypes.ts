@@ -1,15 +1,17 @@
 export type themeType =
+  | "Sustainable living"
   | "Modern"
   | "Vintage"
   | "Minimalist"
+  | "Ibiza"
   | "Professional"
   | "Hipstoric"
   | "Industrial"
-  | "Scandi" 
+  | "Scandi"
   | "Modern farmhouse"
   | "Art Deco"
   | "Neoclassic"
-  | "Coastal";
+  | "Ikea";
 
 export type roomType =
   | "Living Room"
@@ -22,16 +24,18 @@ export type roomType =
   | "Gaming Room";
 
 export const themes: themeType[] = [
+  "Sustainable living",
   "Modern",
   "Vintage",
   "Minimalist",
+  "Ibiza",
   "Professional",
   "Hipstoric",
   "Scandi",
   "Modern farmhouse",
   "Art Deco",
   "Neoclassic",
-  "Coastal"
+  "Ikea",
 ];
 export const rooms: roomType[] = [
   "Living Room",
