@@ -4,10 +4,6 @@ import Stripe from "stripe";
 import { buffer } from "micro";
 import Cors from "micro-cors";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2022-11-15",
-});
-
 const webhookSecret: string = process.env.STRIPE_WEBHOOK_SECRET || "";
 
 const cors = Cors({
@@ -23,6 +19,10 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     const buf = await buffer(req);
     const sig = req.headers["stripe-signature"]!;
+
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+      apiVersion: "2022-11-15",
+    });
 
     let event: Stripe.Event;
 
