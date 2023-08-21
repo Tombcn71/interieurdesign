@@ -12,7 +12,7 @@ const cors = Cors({
 
 const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
-    const buf = await buffer(req);
+    const buf = await buffer(req.body);
     const sig = req.headers["stripe-signature"]!;
 
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
