@@ -11,12 +11,6 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 });
 const webhookSecret: string = process.env.STRIPE_WEBHOOK_SECRET || "";
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
-
 const cors = Cors({
   allowMethods: ["POST", "HEAD"],
 });
