@@ -9,11 +9,6 @@ const webhookSecret: string = process.env.STRIPE_WEBHOOK_SECRET || "";
 const cors = Cors({
   allowMethods: ["POST", "HEAD"],
 });
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
 
 const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
