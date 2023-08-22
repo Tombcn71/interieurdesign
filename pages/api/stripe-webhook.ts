@@ -1,3 +1,4 @@
+"use client";
 import { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../lib/prismadb";
 import Stripe from "stripe";
