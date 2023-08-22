@@ -18,7 +18,7 @@ export const config = {
 const webhookSecret: string = process.env.STRIPE_WEBHOOK_SECRET || "";
 
 const cors = Cors({
-  allowMethods: ["POST", "HEAD"],
+  allowMethods: ["POST", "HEAD", "GET"],
 });
 
 const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -60,7 +60,7 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
       // @ts-ignore
       switch (paymentIntent.amount_subtotal) {
-        case 500:
+        case 100:
         case 1000:
           creditAmount = 20;
           break;
