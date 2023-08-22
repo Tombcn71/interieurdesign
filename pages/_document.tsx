@@ -26,6 +26,10 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
+        <script
+          src="https://web3forms.com/client/script.js"
+          async
+          defer></script>
       </Html>
     );
   }

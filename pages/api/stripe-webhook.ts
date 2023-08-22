@@ -3,13 +3,10 @@ import prisma from "../../lib/prismadb";
 import Stripe from "stripe";
 import { buffer } from "micro";
 import Cors from "micro-cors";
-import getRawBody from "raw-body";
-import { stringify } from "postcss";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2022-11-15",
 });
-const webhookSecret: string = process.env.STRIPE_WEBHOOK_SECRET || "";
 
 export const config = {
   api: {
@@ -17,20 +14,25 @@ export const config = {
   },
 };
 
+const webhookSecret: string = process.env.STRIPE_WEBHOOK_SECRET || "";
+
 const cors = Cors({
   allowMethods: ["POST", "HEAD"],
 });
 
 const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
+    const buf = await buffer(req);
     const sig = req.headers["stripe-signature"]!;
 
     let event: Stripe.Event;
-    console.log("body", JSON.stringify(req.headers));
 
     try {
-      const rawBody = await getRawBody(req);
-      event = stripe.webhooks.constructEvent(rawBody, sig, webhookSecret);
+      event = stripe.webhooks.constructEvent(
+        buf.toString(),
+        sig,
+        webhookSecret
+      );
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : "Unknown error";
       // On error, log and return the error message.
@@ -53,12 +55,12 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
       // @ts-ignore
       const userEmail = paymentIntent.customer_details.email;
-
       let creditAmount = 0;
 
       // @ts-ignore
       switch (paymentIntent.amount_subtotal) {
-        case 100:
+        case 500:
+        case 1000:
           creditAmount = 20;
           break;
         case 1900:
