@@ -1,9 +1,8 @@
-"use client";
 import { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../lib/prismadb";
 import Stripe from "stripe";
-import { buffer } from "micro";
 import Cors from "micro-cors";
+import getRawBody from "raw-body";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2022-11-15",
@@ -18,22 +17,17 @@ export const config = {
 const webhookSecret: string = process.env.STRIPE_WEBHOOK_SECRET || "";
 
 const cors = Cors({
-  allowMethods: ["POST", "HEAD", "GET"],
+  allowMethods: ["POST", "HEAD"],
 });
 
 const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
-    const buf = await buffer(req);
+    const rawBody = await getRawBody(req); // Use getRawBody to get the raw request body
     const sig = req.headers["stripe-signature"]!;
-
     let event: Stripe.Event;
 
     try {
-      event = stripe.webhooks.constructEvent(
-        buf.toString(),
-        sig,
-        webhookSecret
-      );
+      event = stripe.webhooks.constructEvent(rawBody, sig, webhookSecret);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : "Unknown error";
       // On error, log and return the error message.
