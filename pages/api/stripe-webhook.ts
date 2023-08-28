@@ -14,8 +14,7 @@ export const config = {
   },
 };
 
-const webhookSecret: string =
-  process.env.whsec_hDcL6zZNIjRgklbD2H3ZIUn6B2u5GMM0 || "";
+const webhookSecret: string = process.env.STRIPE_WEBHOOK_SECRET || "";
 
 const cors = Cors({
   allowMethods: ["POST", "HEAD"],
