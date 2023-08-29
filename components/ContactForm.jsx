@@ -27,7 +27,7 @@ export default function Contact() {
 
     // Please update the Access Key in the .env
     const apiKey =
-        process.env.PUBLIC_ACCESS_KEY || "791ff4c5-47a8-40df-87f4-81e4619d5086";
+        process.env.PUBLIC_ACCESS_KEY || "791ff4c5-47a8-40df-87f4-81e4619d5086"
 
     const { submit: onSubmit } = useWeb3Forms({
         access_key: apiKey,
