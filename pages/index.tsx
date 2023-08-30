@@ -42,9 +42,13 @@ const Home: NextPage = () => {
             <div className="max-w-screen-xl mx-auto md:px-8">
               <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
                 <div className="flex-1 sm:hidden lg:block">
+                  <h2 className="mb-1 text-gray-500 font-medium text-lg">
+                    Oorspronkelijke kamer
+                  </h2>
+
                   <Image
                     alt="Original photo of a room with roomGPT.io"
-                    src="/Diy.jpg"
+                    src="/minimalist.jpg"
                     className="w-full object-cover h-96 rounded-2xl"
                     width={400}
                     height={400}
@@ -52,9 +56,13 @@ const Home: NextPage = () => {
                   <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl"></div>
                 </div>
                 <div className="flex-1 sm:hidden lg:block">
+                  <h2 className="mb-1 text-gray-500 font-medium text-lg">
+                    Kamer na a.i. interieurdesign
+                  </h2>
+
                   <Image
                     alt="Original photo of a room with roomGPT.io"
-                    src="/Pro.jpg"
+                    src="/woonkamer.jpg"
                     className="w-full object-cover h-96 rounded-2xl"
                     width={400}
                     height={400}
