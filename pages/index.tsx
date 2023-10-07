@@ -31,7 +31,7 @@ const Home: NextPage = () => {
           </h1>
           <h2 className="mx-auto mt-12 max-w-xl text-lg sm:text-gray-600  text-gray-800 leading-7">
             Upload een foto van je kamer en kies uit 30+ verschillende design
-            stijlen. Herontwerp vandaag nog jouw nieuwe kamer.
+            stijlen. Herontwerp vandaag nog jouw nieuwe kamer.ggg
           </h2>
           <Link
             className="bg-teal-600 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-teal-400 transition"
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
 
                   <Image
                     alt="Original photo of a room with roomGPT.io"
-                    src="/minimalist.jpg"
+                    src="/Diy.jpg"
                     className="w-full object-cover h-96 rounded-2xl"
                     width={400}
                     height={400}
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
 
                   <Image
                     alt="Original photo of a room with roomGPT.io"
-                    src="/woonkamer.jpg"
+                    src="/Pro.jpg"
                     className="w-full object-cover h-96 rounded-2xl"
                     width={400}
                     height={400}
