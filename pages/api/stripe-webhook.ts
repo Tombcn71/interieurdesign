@@ -3,7 +3,6 @@ import prisma from "../../lib/prismadb";
 import Stripe from "stripe";
 import { buffer } from "micro";
 import Cors from "micro-cors";
-import getRawBody from "raw-body";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2022-11-15",
@@ -27,11 +26,13 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
     const sig = req.headers["stripe-signature"]!;
 
     let event: Stripe.Event;
-    console.log("body,JSON.stringify", req.body);
 
     try {
-      const rawBody = await getRawBody(req);
-      event = stripe.webhooks.constructEvent(rawBody, sig, webhookSecret);
+      event = stripe.webhooks.constructEvent(
+        buf.toString(),
+        sig,
+        webhookSecret
+      );
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : "Unknown error";
       // On error, log and return the error message.
@@ -45,34 +46,30 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
     console.log("✅ Success:", event.id);
 
     // Cast event data to Stripe object.
-    if (
-      event.type === "payment_intent.succeeded" ||
-      event.type === "checkout.session.completed"
-    ) {
+    if (event.type === "payment_intent.succeeded") {
       const paymentIntent = event.data.object as Stripe.PaymentIntent;
       console.log(`💰 PaymentIntent: ${JSON.stringify(paymentIntent)}`);
 
       // @ts-ignore
-      const userEmail = paymentIntent.customer_details.email;
+      const userEmail = paymentIntent.charges.data[0].billing_details.email;
       let creditAmount = 0;
 
-      // @ts-ignore
-      switch (paymentIntent.amount_subtotal) {
-        case 100:
+      // This is where the magic happens
+      switch (paymentIntent.amount) {
+        case 500:
         case 1000:
           creditAmount = 20;
           break;
-        case 1900:
+        case 1500:
         case 3000:
-          creditAmount = 100;
+          creditAmount = 80;
           break;
-        case 3500:
+        case 2500:
+          creditAmount = 160;
+          break;
         case 5000:
-          creditAmount = 250;
-          break;
-        case 7000:
         case 10000:
-          creditAmount = 750;
+          creditAmount = 400;
           break;
       }
       await prisma.user.update({
