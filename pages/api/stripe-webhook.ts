@@ -56,8 +56,8 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
       // This is where the magic happens
       switch (paymentIntent.amount) {
-        case 500:
-        case 1000:
+        case 100:
+        case 200:
           creditAmount = 20;
           break;
         case 1500:
