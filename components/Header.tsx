@@ -27,7 +27,7 @@ export default function Header({
         </svg>
 
         <h1 className="sm:text-3xl text-black text-xl  ml-2 tracking-tight">
-          <span className="sm:block hidden">interieurdesign.ai</span>
+          <span>interieurdesign.ai</span>
         </h1>
       </Link>
       {email ? (
@@ -35,22 +35,22 @@ export default function Header({
           <Link
             href="/dream"
             className="border-r border-gray-300 text-black pr-4 flex space-x-2 hover:text-teal-600 transition">
-            <div>Design studio</div>
+            <div></div>
           </Link>
           <Link
             href="/dashboard"
             className="border-r border-gray-300 text-black pr-4 flex space-x-2 hover:text-teal-600 transition">
-            <div>Jouw designs</div>
+            <div></div>
           </Link>
           <Link
             href="/buy-credits"
             className="border-r border-gray-300 text-black pr-4 flex space-x-2 hover:text-teal-600 transition">
-            <div>Koop credits</div>
+            <div></div>
           </Link>
           <Link
             href="/"
             className="border-r border-gray-300 text-black pr-4 flex space-x-2 hover:text-teal-600 transition">
-            <div>Uitloggen</div>
+            <div></div>
           </Link>
 
           {photo ? (
@@ -71,13 +71,13 @@ export default function Header({
             scroll={false}
             href="/#Faq"
             className=" border-r border-gray-300 text-black pr-4 flex space-x-2 hover:text-teal-600 transition">
-            <div>Faq</div>
+            <div></div>
           </Link>
           <Link
             scroll={false}
             href="/#Prijsbundels"
             className="border-r border-gray-300 text-black pr-4 flex space-x-2 hover:text-teal-600 transition">
-            <div>Prijs bundels</div>
+            <div></div>
           </Link>
           <Link
             scroll={false}
@@ -85,10 +85,8 @@ export default function Header({
             className="border-r border-gray-300 text-black pr-4 flex space-x-2 hover:text-teal-600 transition">
             <div>Contact</div>
           </Link>
-          <Link
-            className="flex max-w-fit items-center justify-center space-x-2 rounded-lg bg-teal-600 text-white px-5 py-2 text-sm shadow-md hover:bg-teal-300 bg-teal-600 font-medium transition"
-            href="/dream">
-            <p>Aanmelden </p>
+          <Link href="/dream">
+            <p></p>
           </Link>
 
           {photo ? (

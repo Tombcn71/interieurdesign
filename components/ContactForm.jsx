@@ -48,7 +48,7 @@ export default function Contact() {
 
     return (
         <main className="flex overflow-hidden ">
-            <div className="flex-1 hidden lg:block">
+            <div className="grid  sm:grid-cols-2 lg:grid-cols-2 flex-1 hidden lg:block">
                 <Image
                     alt="Original photo of a room with roomGPT.io"
                     src="/Diy.jpg"
